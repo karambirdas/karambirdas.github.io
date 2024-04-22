@@ -1,150 +1,213 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Karambir Das</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karambir Das's Webpage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: left;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: right;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        hr {
+            border: 0;
+            clear: both;
+            display: block;
+            width: 96%;
+            border-top: 1px solid #ccc;
+            margin: 20px auto;
+        }
+        /* New CSS for the image */
+        .face-image {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            max-width: 200px; /* Adjust as needed */
+        }
+        h2 {
+            font-size: 1rem;
+            position: relative;
+        }
 
-<!---Latest Mathjax LaTex support--->
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$']]
-    }
-  };
-</script>
-  <script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
-<!---Latest Mathjax LaTex support--->
+        h2 span {
+            background-color: white;
+            padding-right: 10px;
+        }
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
-</style>
+        h2:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 0.5em;
+            border-top: 1px solid black;
+            z-index: -1;
+        }
+        /* New CSS for paragraph font style */
+        section p {
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;
+            color: #333; /* Change the color as needed */
+            line-height: 1.6; /* Adjust line height as needed */
+        }
+        header p {
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;
+            color: #fff; /* Change the color as needed */
+            line-height: 10px; /* Adjust line height as needed */
+        }
+        section h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 24px;
+            color: #333; /* Change the color as needed */
+            margin-bottom: 10px; /* Adjust margin as needed */
+        }
+        section h3 {
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            color: #333; /* Change the color as needed */
+            line-height: 10px; /* Adjust line height as needed */
+        }
 
-
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+        header h1 {
+            font-family: "Cormorant Garamond", serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 72px;
+            color: #fff; /* Change the color as needed */
+            margin-bottom: 10px; /* Adjust margin as needed */
+            line-height: 40px;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <p>Hello world !</p>
+        <p>I am </p>
+        <h1>Karambir Das</h1>
+        <!-- Image of the face -->
+        <!--<img class="face-image" src="D:/My pics/c2_2.jpg" alt="Face Drawing">-->
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#talks">Talks</a>
+        <a href="#conferences">Conferences</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <h2><span>About Me </span></h2>
+        <p>I am currently a Prime Minister's research fellow (<a href="https://www.pmrf.in/" style="color:#6ca5d4">PMRF</a>) at the department of Mathematics, Indian Institute of Science, Bangalore, India. My research broadly lies in the heart of Probability and Statistics.  My research advisor is Prof. <a href="https://math.iisc.ac.in/~skiyer/" style="color:#6ca5d4">Srikanth K. Iyer</a>. The random patterns of objects really fascinates me and is the driving force of my research. Recently, I have grown interests in machine learning and coding. Besides pen and paper, I enjoy playing table tennis, frisbee, mafia (werewolf), and video games specially Fifa. </p>
+    </section>
+    
+    
+    <section id="research">
+        <h2><span>Research</span></h2>
+        <p>My research interests include stochastic geometry, random network structures, random geometric graphs, continuum percolation, first-passage percolation, last-passage percolation.</p>
+        <h3>Published/To appear</h3>
+        <ul> 
+            <li><p>(With <a href="https://people.maths.bris.ac.uk/~mb13434/" style="color:#6ca5d4">M. Bal&#225;zs</a>, S. Bhattacharjee, <a href="https://dharper40.math.gatech.edu/" style="color:#6ca5d4">D. Harper</a>) Road layout in the KPZ class. Pre-print <a href="https://arxiv.org/abs/2403.16268" style="color: #7b497e;">arXiv</a>.</p></li>
+        </ul>
+        <h3>Ongoing</h3>
+        <ul>
+            <li><p>Asymptotic behaviour of random functionals of the random geometric graph.</p></li>
+        </ul>
 
-<h1 align=center style="font-family: 'Bungee Shade', cursive; font-size:45px;">Karambir Das</h1>
+    </section>
+    
+    
+    <section id="projects">
+        <h2><span>Projects</span></h2>
+        <ul>
+            <li><p>(MS Project, with <a href="https://math.iisc.ac.in/~skiyer/" style="color:#6ca5d4">Srikanth K. Iyer</a>) Mobility models: Radiation model and Scaling limits of a multi-scaled dynamic network. [<a href="https://drive.google.com/file/d/12EHw38rI2scM1abX9Yd90wbBGJOSqVgU/view?usp=sharing" style="color: #7b497e;">Report</a>]</p></li>
+            <li><p>(With <a href="https://www.michaeldamron.org/" style="color: #6ca5d4;">M. Damron</a> et al.) Kesten's question about directional time constant. [<a href="https://drive.google.com/file/d/182hL69N4AwGw813YTd7uD7wC0m887hV8/view?usp=sharing" style="color: #7b497e;">Report</a>]</p></li>
+        </ul>
+    </section>
+    <section id="talks">
+        <h2><span>Talks</span></h2>
+        <ul>
+            <li><p>Introduction to Percolation Theory: Bernoulli and First-passage percolation, at <a href="https://iiscmathstudentseminars.wordpress.com/" style="color: #6ca5d4;">Prime Time Seminar</a>, IISc. [<a href="https://iiscmathstudentseminars.wordpress.com/2022/08/29/introduction-to-percolation-theory-bernoulli-and-first-passage-percolation/" style="color: #7b497e;">Link</a>, <a href="https://drive.google.com/file/d/1Ywg31HkP8vIo3njzSFftf2oy4PV61r_Q/view?usp=sharing" style="color: #7b497e;">Slides</a>]</p></li>
+        </ul>
+    </section>
 
-<ul class ="nav">
-  <li><a id="about" href="index.html" style="font-family: 'Cinzel Decorative', cursive; font-size: 25px"></a></li>
-  <li><a id="research" href="research.html" style="font-family: 'Cinzel Decorative', cursive; font-size: 25px"></a></li>
-  <li><a id="teaching" href="teaching.html" style="font-family: 'Cinzel Decorative', cursive; font-size: 25px"></a></li>
-  <li><a id="others" href="others.html" style="font-family: 'Cinzel Decorative', cursive; font-size: 25px"></a></li>
-</ul>
-
-<table align=center  style="text-align: justify; text-justify: inter-word;">
-<tr>
-
-<td></td>
-<td style="width:70%; text-align: justify; text-justify: inter-word; border-left: 2px solid white; color: black; border-top: 0px solid white; padding: 0px 20px 20px 20px; font-family: 'Crimson Text', serif; font-size: 20px">
- I am currently a 2nd year Ph.D. student in the <a href="http://math.iisc.ac.in/" style="color:#9f1d1d">Department of Mathematics</a> at the <a href="http://www.iisc.ac.in/" style="color:#9f1d1d">Indian Institute of Science</a>.  
- My advisor is <a href="https://math.iisc.ac.in/~skiyer/"style="color:#9f1d1d">Srikanth K. Iyer</a>.
-</td>  <br/> <br/>
-							 
-							 
-
-<td></td> 
-</tr>
-<tr>
-
-<td></td>
-<td style="width:70%; text-align: justify; text-justify: inter-word; border-left: 2px solid white; color: black; border-top: 0px solid white; padding: 0px 20px 20px 20px; font-family: 'Crimson Text', serif; font-size: 20px">
- Here is my latest <a href="https://drive.google.com/file/d/1yVJMjjL9iXK4vzNuMRmwKr8IhIAYanJp/view?usp=sharing" style="color:#9f1d1d">CV</a>. My email address is <a href="mailto: karambirdas@iisc.ac.in" style="color:#9f1d1d">karambirdas@iisc.ac.in</a>.
-</td>  <br/> <br/>
-							 
-							 
-
-<td></td> 
-</tr>
-</table>
-
-
-
-<style>
-.nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    text-align:center;
-}
-
-.nav li {
-    display:inline;
-}
-
-.nav a:link, a:visited {
-    display:inline-block;
-    font-weight: bold;
-    color: white;
-    background: -webkit-linear-gradient(white, black);
-    text-align: center;
-    padding: 0px 20px 0px 20px;
-    text-decoration: none;
-	;
-}
+    
+    <section id="conferences">
+        <h2><span>Conferences</span></h2>
+    </section>
 
 
-p {
-	 margin-left: auto;
-    margin-right: auto;
-	 width: 400px;
-	 
-}
-
-ol {
-	 margin-left: auto;
-    margin-right: auto;
-	 width: 450px;
-	 
-}
-
-
-
-a:link {
-  color: black;
-  text-decoration: none;
-}
-
-a:visited {
-  color: black;
-}
-
-a:hover {
-  color: black;
-  text-decoration: underline;
-}
-
-a:active {
-  color: black;
-}
+    <section id="teaching">
+        <h2><span>Teaching</span></h2>
+        <h3>I have been a teaching assistant for</h3>
+        <ul>
+            <li><p><a href="https://math.iisc.ac.in/all-courses/ma361.html" style="color: #6ca5d4;">MA 361</a>, Probability Theory, at IISc, Fall 2023 semester.</p></li>
+            <li><p>Teaching math concepts and problem solving for entrance exams, Jan 2024- present, at Ramakrishna Mission Vidyamadira, Belur.</p></li>
+        </ul>
+    </section>
+    
+    
+    <section id="contact">
+        <h2><span>Contact</span></h2>
+        <p>Email: karambirdas@iisc.ac.in <br>
+           Alternate email: karambir.kd7@gmail.com
+        </p>
+        <p><Address>Mailing Address:<br> Department of Mathematics<br>
+            Indian Institute of Science<br>
+            Bangalore-560012<br>
+            Karnataka, India.</Address>
+        </p>
+    </section>
 
 
-</style>
-
-
-<script>
-document.getElementById("about").innerHTML = 'About';
-</script>
-<script>
-document.getElementById("research").innerHTML = 'Research';
-</script>
-<script>
-document.getElementById("teaching").innerHTML = 'Teaching';
-</script>
-<script>
-document.getElementById("others").innerHTML = 'Others';
-</script>
+    <footer>
+        <p> <a href="mailto:karambirdas@iisc.ac.in" style="color: #6ca5d4;">Email</a>    <a href="https://linkedin.com/in/karambir-das-585730212" style="color: #6ca5d4;">LinkedIn</a>    <a href="https://github.com/karambirdas" style="color: #6ca5d4;">Github</a>   </p>
+    </footer>
 </body>
 </html>
