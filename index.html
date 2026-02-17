@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karambir Das's Webpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -11,127 +12,217 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
-        body {
+         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            background-color: #fff;
         }
+
+        /* --- Header Styling --- */
         header {
             background-color: #333;
             color: #fff;
-            padding: 20px;
+            padding: 40px 0; /* Vertical padding only */
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            width: 100%; /* Spans full width */
+            padding: 0 5%; /* Adds 5% space on sides for breathing room */
+            box-sizing: border-box;
+            flex-wrap: wrap;
+        }
+
+        .header-left {
+            flex: 0 0 auto;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 40px; 
+            box-sizing: border-box;
+        }
+
+        .header-right {
+            flex: 1; 
             text-align: left;
         }
+
+        .profile-pic {
+            width: 170px; 
+            height: 300px; 
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            object-fit: cover; 
+            object-position: center top; 
+        }
+
+        .header-right p.intro {
+            font-family: "Montserrat", sans-serif;
+            font-size: 18px;
+            color: #ccc;
+            margin: 0;
+        }
+
+        .header-right h1 {
+            font-family: "Cormorant Garamond", serif;
+            font-weight: 600;
+            font-size: 64px;
+            color: #fff;
+            margin: 5px 0;
+            line-height: 1.1;
+        }
+
+        .header-bio-text {
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;
+            color: #ddd;
+            line-height: 1.6;
+            margin: 10px 0 20px 0;
+        }
+
+        .header-connect {
+            display: flex;
+            gap: 25px;
+            margin-top: 15px;
+        }
+
+        .header-connect a {
+            text-decoration: none;
+            color: #fff;
+            font-family: "Montserrat", sans-serif;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .header-connect a i {
+            font-size: 18px;
+            margin-right: 8px;
+            color: #6ca5d4;
+        }
+
+        .header-connect a:hover {
+            color: #6ca5d4;
+        }
+
+        /* --- Navigation --- */
         nav {
             background-color: #444;
-            padding: 10px;
-            text-align: right;
+            padding: 12px 5%; /* Matches page padding */
+            text-align: left;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 10px;
+            margin-right: 25px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: #6ca5d4;
         }
-        section {
-            padding: 20px;
-            margin: 20px;
+
+        /* --- Updated Full Width Layout --- */
+        .page-container {
+            width: 100%; /* Spans full width */
+            padding: 40px 5%; /* Horizontal padding matches header */
+            box-sizing: border-box;
         }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1px;
-            position: fixed;
-            bottom: 0;
+
+        .main-content {
             width: 100%;
         }
-        hr {
-            border: 0;
-            clear: both;
-            display: block;
-            width: 96%;
-            border-top: 1px solid #ccc;
-            margin: 20px auto;
+
+        /* --- Section Styling --- */
+        section {
+            padding: 0px 0;
+            margin-bottom: 0px;
         }
-        /* New CSS for the image */
-        .face-image {
-            position: absolute;
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
-            max-width: 200px; /* Adjust as needed */
-        }
+        
         h2 {
             font-size: 1rem;
             position: relative;
         }
-
         h2 span {
             background-color: white;
-            padding-right: 10px;
+            padding-right: 15px;
         }
-
         h2:after {
             content: "";
             position: absolute;
-            bottom: 0;
+            bottom: 0.4em; 
             left: 0;
             right: 0;
-            height: 0.5em;
-            border-top: 1px solid black;
+            height: 1px;
+            border-top: 1px solid #ddd;
             z-index: -1;
         }
-        /* New CSS for paragraph font style */
+
         section p {
             font-family: "Montserrat", sans-serif;
             font-size: 16px;
-            color: #333; /* Change the color as needed */
-            line-height: 1.6; /* Adjust line height as needed */
-        }
-        header p {
-            font-family: "Montserrat", sans-serif;
-            font-size: 16px;
-            color: #fff; /* Change the color as needed */
-            line-height: 10px; /* Adjust line height as needed */
+            color: #444; 
+            line-height: 1.7; 
         }
         section h2 {
             font-family: "Cormorant Garamond", serif;
             font-weight: 700;
-            font-style: normal;
-            font-size: 24px;
-            color: #333; /* Change the color as needed */
-            margin-bottom: 10px; /* Adjust margin as needed */
-        }
-        section h3 {
-            font-family: "Montserrat", sans-serif;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            color: #333; /* Change the color as needed */
-            line-height: 10px; /* Adjust line height as needed */
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 15px; 
         }
 
-        header h1 {
-            font-family: "Cormorant Garamond", serif;
-            font-weight: 600;
-            font-style: normal;
-            font-size: 72px;
-            color: #fff; /* Change the color as needed */
-            margin-bottom: 10px; /* Adjust margin as needed */
-            line-height: 50px;
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 14px;
+        }
+
+        /* Mobile View */
+        @media (max-width: 768px) {
+            .header-content { flex-direction: column; text-align: center; }
+            .header-left { padding-right: 0; margin-bottom: 20px; justify-content: center; }
+            .header-connect { justify-content: center; flex-wrap: wrap; }
+            nav { text-align: center; }
+            nav a { margin: 5px 10px; }
         }
     </style>
 </head>
 <body>
     <header>
-        <p>Hello world !</p>
-        <p>I am </p>
-        <h1>Karambir Das</h1>
-        <!-- Image of the face -->
-        <!--<img class="face-image" src="D:/My pics/c2_2.jpg" alt="Face Drawing">-->
+        <div class="header-content">
+            <div class="header-left">
+                <img class="profile-pic" src="pic2.jpg" alt="Karambir Das">
+            </div>
+
+            <div class="header-right">
+                <p class="intro">Hello world !</p>
+                <p class="intro">I am</p>
+                <h1>Karambir Das</h1>
+                
+                <p class="header-bio-text">
+                    I like to learn and grow.
+                </p>
+
+                <div class="header-connect">
+                    <a href="mailto:karambirdas@iisc.ac.in"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://github.com/karambirdas"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://linkedin.com/in/karambir-das-585730212"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+        </div>
     </header>
     <nav>
         <a href="#about">About</a>
@@ -143,105 +234,144 @@
         <a href="#teaching">Teaching</a>
         <a href="#contact">Contact</a>
     </nav>
-    <section id="about">
-        <h2><span>About Me </span></h2>
-        <p>I am currently a Prime Minister's research fellow (<a href="https://www.pmrf.in/" style="color:#6ca5d4">PMRF</a>) at the department of Mathematics, Indian Institute of Science, Bangalore, India. My research broadly lies in the heart of Probability and Statistics.  My research advisor is Prof. <a href="https://math.iisc.ac.in/~skiyer/" style="color:#6ca5d4">Srikanth K. Iyer</a>. The random patterns of objects really fascinates me and is the driving force of my research. Recently, I have grown interests in machine learning and coding. Besides pen and paper, I enjoy playing table tennis, frisbee, mafia (werewolf), and video games specially Fifa. </p>
-    </section>
+    <div class="page-container"> <main class="main-content">
+        <main class="main-content">
+            <section id="about">
+                <h2><span>About Me </span></h2>
+                <p>I am currently a Prime Minister's research fellow (<a href="https://www.pmrf.in/" style="color:#6ca5d4">PMRF</a>) at the department of Mathematics, Indian Institute of Science, Bangalore, India. My research broadly lies in the heart of Probability and Statistics.  My research advisor is Prof. <a href="https://math.iisc.ac.in/~skiyer/" style="color:#6ca5d4">Srikanth K. Iyer</a>. The random patterns of objects really fascinates me and is the driving force of my research. Recently, I have grown interests in machine learning and coding. Besides pen and paper, I enjoy playing table tennis, frisbee, mafia (werewolf), and video games specially Fifa. </p>
+            </section>        
+        </main>
+    </div>
     
     
-    <section id="research">
-        <h2><span>Research</span></h2>
-        <p>My research interests include stochastic geometry, random network structures, random geometric graphs, continuum percolation, first-passage percolation, last-passage percolation.</p>
-        <h3>Published/To appear</h3>
-        <ul> 
-            <li><p>(With <a href="https://people.maths.bris.ac.uk/~mb13434/" style="color:#6ca5d4">M. Bal&#225;zs</a>, <a href="https://sites.google.com/view/sudeshnabhattacharjee/home" style="color:#6ca5d4">S. Bhattacharjee</a>, <a href="https://www.linkedin.com/in/dharper40/" style="color:#6ca5d4">D. Harper</a>) Road layout in the KPZ class. Pre-print <a href="https://arxiv.org/abs/2403.16268" style="color: #7b497e;">[arXiv]</a>. <br> <i>J. Stat. Phys.</i> 192, 83 (2025), <a href="https://doi.org/10.1007/s10955-025-03460-7" style="color: #7b497e;"> [Article]</a>.</p></li>
-        </ul>
-        <ul> 
-            <li><p>(With <a href="https://statistics.wharton.upenn.edu/profile/bhaswar/" style="color:#6ca5d4">Bhaswar Bhattacharya</a>, <a href="https://www.sanchayanbhowal.su.domains" style="color:#6ca5d4">S. Bhowal</a>, <a href="https://sigma.iimas.unam.mx/laura/" style="color:#6ca5d4">L. Eslava</a>, <a href="https://www.icts.res.in/people/shaibal-karmakar" style="color:#6ca5d4">S. Karmakar</a>) <br> Thresholds and Fluctuations of Submultiplexes in Random Multiplex Networks. Pre-print <a href="https://arxiv.org/abs/2511.12326" style="color: #7b497e;">[arXiv]</a>.</p></li>
-        </ul>
-        <h3>Ongoing</h3>
-        <ul>
-            <li><p>(With <a href="https://math.iisc.ac.in/~skiyer/" style="color:#6ca5d4">Srikanth K. Iyer</a>) Limit laws for functionals of Random Geometric Graph.</p></li>
-        </ul>
+    <div class="page-container"> <main class="main-content"></main>
+        <main class="main-content">
+            <section id="research">
+                <h2><span>Research</span></h2>
+                <p>My research interests include stochastic geometry, random network structures, random geometric graphs, continuum percolation, first-passage percolation, last-passage percolation.</p>
+                <h3>Published/To appear</h3>
+                <ul> 
+                    <li><p>(With <a href="https://people.maths.bris.ac.uk/~mb13434/" style="color:#6ca5d4">M. Bal&#225;zs</a>, <a href="https://sites.google.com/view/sudeshnabhattacharjee/home" style="color:#6ca5d4">S. Bhattacharjee</a>, <a href="https://www.linkedin.com/in/dharper40/" style="color:#6ca5d4">D. Harper</a>) Road layout in the KPZ class. Pre-print <a href="https://arxiv.org/abs/2403.16268" style="color: #7b497e;">[arXiv]</a>. <br> <i>J. Stat. Phys.</i> 192, 83 (2025), <a href="https://doi.org/10.1007/s10955-025-03460-7" style="color: #7b497e;"> [Article]</a>.</p></li>
+                </ul>
+                <ul> 
+                    <li><p>(With <a href="https://statistics.wharton.upenn.edu/profile/bhaswar/" style="color:#6ca5d4">Bhaswar Bhattacharya</a>, <a href="https://www.sanchayanbhowal.su.domains" style="color:#6ca5d4">S. Bhowal</a>, <a href="https://sigma.iimas.unam.mx/laura/" style="color:#6ca5d4">L. Eslava</a>, <a href="https://www.icts.res.in/people/shaibal-karmakar" style="color:#6ca5d4">S. Karmakar</a>) <br> Thresholds and Fluctuations of Submultiplexes in Random Multiplex Networks. Pre-print <a href="https://arxiv.org/abs/2511.12326" style="color: #7b497e;">[arXiv]</a>.</p></li>
+                </ul>
+                <h3>Ongoing</h3>
+                <ul>
+                    <li><p>(With <a href="https://math.iisc.ac.in/~skiyer/" style="color:#6ca5d4">Srikanth K. Iyer</a>) Limit laws for functionals of Random Geometric Graph.</p></li>
+                </ul>
+        
+            </section>
+        </main>
+    </div>
+    
 
-    </section>
+    <div class="page-container"> <main class="main-content"></main>
+        <main class="main-content">
+            <section id="projects">
+                <h2><span>Projects</span></h2>
+                <ul>
+                    <li><p>(MS Project, with <a href="https://math.iisc.ac.in/~skiyer/" style="color:#6ca5d4">Srikanth K. Iyer</a>) Mobility models: Radiation model and Scaling limits of a multi-scaled dynamic network. [<a href="https://drive.google.com/file/d/12EHw38rI2scM1abX9Yd90wbBGJOSqVgU/view?usp=sharing" style="color: #7b497e;">Report</a>]</p></li>
+                    <li><p>(With <a href="https://www.michaeldamron.org/" style="color: #6ca5d4;">M. Damron</a> et al.) Kesten's question about directional time constant. [<a href="https://drive.google.com/file/d/182hL69N4AwGw813YTd7uD7wC0m887hV8/view?usp=sharing" style="color: #7b497e;">Report</a>]</p></li>
+                </ul>
+            </section>            
+        </main>
+    </div>
+    
+
+    <div class="page-container"> <main class="main-content"></main>
+        <main class="main-content">
+            <section id="achievements">
+                <h2><span>Achievements</span></h2>
+                <p>I have been awarded the following scholarships and awards<p>
+                <ul>
+                    <li><p>P.L. Bhatnagar Medal 2023-24.</p></li>
+                    <li><p>Prime Minister's Research Fellowship (PMRF), 2023-2027.</p></li>
+                </ul>
+            </section>            
+        </main>
+    </div>
+    
+    <div class="page-container"> <main class="main-content"></main>
+        <main class="main-content">
+            <section id="talks">
+                <h2><span>Talks</span></h2>
+                <p>I have delivered the following talks<p>
+                <ul>
+                    <li><p>Limit Laws of Random Graphs using Stein's method, at Postdoc-Student Symposium, IISc, 2025. [<a href="https://math.iisc.ac.in/Postdoc_Student_Symposium-2025.html" style="color: #7b497e;">Link</a>, <a href="https://drive.google.com/file/d/1Zqf9DM8bU9Kuje0xTZlMlT3h5_FBs8ae/view?usp=sharing" style="color: #7b497e;">Slides</a>]</p></li>
+                    <li><p>How to simulate Brownian motion?, at <a href="https://iiscmathstudentseminars.wordpress.com/" style="color: #6ca5d4;">Prime Time Seminar</a>, IISc, 2025. [<a href="https://iiscmathstudentseminars.wordpress.com/2025/02/24/how-to-simulate-brownian-motion/" style="color: #7b497e;">Link</a>] [<a href="https://youtu.be/beidqBNiTEU" style="color: #7b497e;">Video Link</a>]</p></li></p></li>
+                    <li><p>Central Limit Theorems via Stein’s method, at <a href="https://iiscmathstudentseminars.wordpress.com/" style="color: #6ca5d4;">Prime Time Seminar</a>, IISc, 2024. [<a href="https://iiscmathstudentseminars.wordpress.com/2024/11/12/central-limit-theorems-via-steins-method/" style="color: #7b497e;">Link</a>]</p></li></p></li>
+                    <li><p>The realm of Random Geometric Graphs, at Postdoc-Student Symposium, IISc, 2024. [<a href="https://math.iisc.ac.in/PSS24.html" style="color: #7b497e;">Link</a>, <a href="https://drive.google.com/file/d/1EnMvXyc4EKIbweGXfFzqXTozY35Bgm4f/view?usp=sharing" style="color: #7b497e;">Slides</a>]</p></li>
+                    <li><p>Cantor set and Fractals, at <a href="https://iiscmathstudentseminars.wordpress.com/" style="color: #6ca5d4;">Prime Time Seminar</a>, IISc, 2023. [<a href="https://iiscmathstudentseminars.wordpress.com/2023/09/19/cantor-set-and-fractals/" style="color: #7b497e;">Link</a>, <a href="https://drive.google.com/file/d/10CauhCW2Zd44V7XqUZuRvPReQdtigZ_v/view?usp=sharing" style="color: #7b497e;">Slides</a>]</p></li></p></li>
+                    <li><p>Introduction to Percolation Theory: Bernoulli and First-passage percolation, at <a href="https://iiscmathstudentseminars.wordpress.com/" style="color: #6ca5d4;">Prime Time Seminar</a>, IISc, 2022. [<a href="https://iiscmathstudentseminars.wordpress.com/2022/08/29/introduction-to-percolation-theory-bernoulli-and-first-passage-percolation/" style="color: #7b497e;">Link</a>, <a href="https://drive.google.com/file/d/1Ywg31HkP8vIo3njzSFftf2oy4PV61r_Q/view?usp=sharing" style="color: #7b497e;">Slides</a>]</p></li>
+                </ul>
+            </section>            
+        </main>
+    </div>
+
+    <div class="page-container"> <main class="main-content"></main>
+        <main class="main-content">
+            <section id="conferences">
+                <h2><span>Conferences</span></h2>
+                <p>I have attended the following conferences<p>
+                <ul>
+                    <li><p>Topological Data Analysis in Stochastic Geometry and Image Processing at Aarhus Institute of Advanced Studies (AIAS), Denmark. [<a href="https://sites.google.com/view/aarhustda/home" style="color: #6ca5d4;">Webpage</a>]</p></li>
+                    <li><p>Mathematical Foundations of Network Models and their Applications BIRS at CMI, Chennai. [<a href="https://www.birs.ca/events/2024/5-day-workshops/24w4004" style="color: #6ca5d4;">Webpage</a>]</p></li>
+                    <li><p>ICTS-Networks workshop "Challenges in Networks" at ICTS, Bangalore, 2024. [<a href="https://www.icts.res.in/discussion-meeting/Networks2024" style="color: #6ca5d4;">Webpage</a>]</p></li>
+                    <li><p>Data science: Probabilistic and Optimization method, at ICTS, 2023. [<a href="https://www.icts.res.in/discussion-meeting/DSPOM2023" style="color: #6ca5d4;">Webpage</a>]</p></li>
+                    <li><p>Lectures in Probability and Stochastic Processes XV 2022 at IISc [<a href="https://sites.google.com/view/lpsxv/home" style="color: #6ca5d4;">Webpage</a>] and XVI 2023 at ICTS [<a href="https://www.icts.res.in/discussion-meeting/lps" style="color: #6ca5d4;">Webpage</a>].</p></li>
+                    <li><p>First-Passage Percolation and related models, at Indian Centre for Theoretical Sciences(ICTS), Bangalore, 2022. [<a href="https://www.icts.res.in/program/fpp2022" style="color: #6ca5d4;">Webpage</a>]</p></li>
+                </ul>
+            </section>            
+        </main>
+    </div>
+
+    <div class="page-container"> <main class="main-content"></main>
+        <main class="main-content">
+            <section id="teaching">
+                <h2><span>Teaching</span></h2>
+                <p>I have been a teaching assistant for<p>
+                <ul>
+                    <li><p><a href="https://math.iisc.ac.in/all-courses/ma366a.html" style="color: #6ca5d4;">MA 366a</a>, Introduction to Stochastic Finance, at IISc, Spring 2026 semester.</p></li>
+                    <li><p><a href="https://math.iisc.ac.in/all-courses/ma361.html" style="color: #6ca5d4;">MA 361</a>, Probability Theory, at IISc, Fall 2023 and Fall 2025 semester.</p></li>
+                    <li><p>Advance Analysis and Algebra, Jan 2024- May 2024, at Ramakrishna Mission Vidyamadira, Belur.</p></li>
+                    <li><p><a href="https://math.iisc.ac.in/all-courses/uma201.html" style="color: #6ca5d4;">UM 201</a>, Probability and Statistics, at IISc, Fall 2024 semester.</p></li>
+                    <li><p>Advance Analysis and Algebra, Aug 2024- May 2025, at Ramakrishna Mission Vidyamadira, Belur. [<a href="notes_RKMV_2024.html" style="color: #6ca5d4;">Notes</a>]</p></li>
+                    <li><p><a href="https://math.iisc.ac.in/all-courses/ma262.html" style="color: #6ca5d4;">MA 262</a>, Introduction to Stochastic Processes, at IISc, Spring 2025 semester. [<a href="https://sanchayansen.wixsite.com/root/ma-262-2025-january" style="color: #6ca5d4;">Course Website</a>]</p></li>
+                    <li><p>Advance Analysis and Algebra, Sep 2025- present, at Ramakrishna Mission Vidyamadira, Belur. [<a href="notes_RKMV_2024.html" style="color: #6ca5d4;">Notes</a>]</p></li>
+                </ul>
+            </section>            
+        </main>
+    </div>
+    
+
+    <div class="page-container"> <main class="main-content"></main>
+        <main class="main-content">
+            <section id="contact">
+                <h2><span>Contact</span></h2>
+                <p>Email: karambirdas@iisc.ac.in <br>
+                   Alternate email: karambir.kd7@gmail.com
+                </p>
+                <p><Address>Mailing Address:<br> Department of Mathematics<br>
+                    Indian Institute of Science<br>
+                    Bangalore-560012<br>
+                    Karnataka, India.</Address>
+                </p>
+            </section>
+        </main>
+    </div>
     
     
-    <section id="projects">
-        <h2><span>Projects</span></h2>
-        <ul>
-            <li><p>(MS Project, with <a href="https://math.iisc.ac.in/~skiyer/" style="color:#6ca5d4">Srikanth K. Iyer</a>) Mobility models: Radiation model and Scaling limits of a multi-scaled dynamic network. [<a href="https://drive.google.com/file/d/12EHw38rI2scM1abX9Yd90wbBGJOSqVgU/view?usp=sharing" style="color: #7b497e;">Report</a>]</p></li>
-            <li><p>(With <a href="https://www.michaeldamron.org/" style="color: #6ca5d4;">M. Damron</a> et al.) Kesten's question about directional time constant. [<a href="https://drive.google.com/file/d/182hL69N4AwGw813YTd7uD7wC0m887hV8/view?usp=sharing" style="color: #7b497e;">Report</a>]</p></li>
-        </ul>
-    </section>
 
-    <section id="achievements">
-        <h2><span>Achievements</span></h2>
-        <p>I have been awarded the following scholarships and awards<p>
-        <ul>
-            <li><p>P.L. Bhatnagar Medal 2023-24.</p></li>
-            <li><p>Prime Minister's Research Fellowship (PMRF), 2023-2027.</p></li>
-        </ul>
-    </section>
-
-    <section id="talks">
-        <h2><span>Talks</span></h2>
-        <p>I have delivered the following talks<p>
-        <ul>
-            <li><p>Limit Laws of Random Graphs using Stein's method, at Postdoc-Student Symposium, IISc, 2025. [<a href="https://math.iisc.ac.in/Postdoc_Student_Symposium-2025.html" style="color: #7b497e;">Link</a>, <a href="https://drive.google.com/file/d/1Zqf9DM8bU9Kuje0xTZlMlT3h5_FBs8ae/view?usp=sharing" style="color: #7b497e;">Slides</a>]</p></li>
-            <li><p>How to simulate Brownian motion?, at <a href="https://iiscmathstudentseminars.wordpress.com/" style="color: #6ca5d4;">Prime Time Seminar</a>, IISc, 2025. [<a href="https://iiscmathstudentseminars.wordpress.com/2025/02/24/how-to-simulate-brownian-motion/" style="color: #7b497e;">Link</a>] [<a href="https://youtu.be/beidqBNiTEU" style="color: #7b497e;">Video Link</a>]</p></li></p></li>
-            <li><p>Central Limit Theorems via Stein’s method, at <a href="https://iiscmathstudentseminars.wordpress.com/" style="color: #6ca5d4;">Prime Time Seminar</a>, IISc, 2024. [<a href="https://iiscmathstudentseminars.wordpress.com/2024/11/12/central-limit-theorems-via-steins-method/" style="color: #7b497e;">Link</a>]</p></li></p></li>
-            <li><p>The realm of Random Geometric Graphs, at Postdoc-Student Symposium, IISc, 2024. [<a href="https://math.iisc.ac.in/PSS24.html" style="color: #7b497e;">Link</a>, <a href="https://drive.google.com/file/d/1EnMvXyc4EKIbweGXfFzqXTozY35Bgm4f/view?usp=sharing" style="color: #7b497e;">Slides</a>]</p></li>
-            <li><p>Cantor set and Fractals, at <a href="https://iiscmathstudentseminars.wordpress.com/" style="color: #6ca5d4;">Prime Time Seminar</a>, IISc, 2023. [<a href="https://iiscmathstudentseminars.wordpress.com/2023/09/19/cantor-set-and-fractals/" style="color: #7b497e;">Link</a>, <a href="https://drive.google.com/file/d/10CauhCW2Zd44V7XqUZuRvPReQdtigZ_v/view?usp=sharing" style="color: #7b497e;">Slides</a>]</p></li></p></li>
-            <li><p>Introduction to Percolation Theory: Bernoulli and First-passage percolation, at <a href="https://iiscmathstudentseminars.wordpress.com/" style="color: #6ca5d4;">Prime Time Seminar</a>, IISc, 2022. [<a href="https://iiscmathstudentseminars.wordpress.com/2022/08/29/introduction-to-percolation-theory-bernoulli-and-first-passage-percolation/" style="color: #7b497e;">Link</a>, <a href="https://drive.google.com/file/d/1Ywg31HkP8vIo3njzSFftf2oy4PV61r_Q/view?usp=sharing" style="color: #7b497e;">Slides</a>]</p></li>
-        </ul>
-    </section>
-
-    
-    <section id="conferences">
-        <h2><span>Conferences</span></h2>
-        <p>I have attended the following conferences<p>
-        <ul>
-            <li><p>Topological Data Analysis in Stochastic Geometry and Image Processing at Aarhus Institute of Advanced Studies (AIAS), Denmark. [<a href="https://sites.google.com/view/aarhustda/home" style="color: #6ca5d4;">Webpage</a>]</p></li>
-            <li><p>Mathematical Foundations of Network Models and their Applications BIRS at CMI, Chennai. [<a href="https://www.birs.ca/events/2024/5-day-workshops/24w4004" style="color: #6ca5d4;">Webpage</a>]</p></li>
-            <li><p>ICTS-Networks workshop "Challenges in Networks" at ICTS, Bangalore, 2024. [<a href="https://www.icts.res.in/discussion-meeting/Networks2024" style="color: #6ca5d4;">Webpage</a>]</p></li>
-            <li><p>Data science: Probabilistic and Optimization method, at ICTS, 2023. [<a href="https://www.icts.res.in/discussion-meeting/DSPOM2023" style="color: #6ca5d4;">Webpage</a>]</p></li>
-            <li><p>Lectures in Probability and Stochastic Processes XV 2022 at IISc [<a href="https://sites.google.com/view/lpsxv/home" style="color: #6ca5d4;">Webpage</a>] and XVI 2023 at ICTS [<a href="https://www.icts.res.in/discussion-meeting/lps" style="color: #6ca5d4;">Webpage</a>].</p></li>
-            <li><p>First-Passage Percolation and related models, at Indian Centre for Theoretical Sciences(ICTS), Bangalore, 2022. [<a href="https://www.icts.res.in/program/fpp2022" style="color: #6ca5d4;">Webpage</a>]</p></li>
-        </ul>
-    </section>
-
-
-    <section id="teaching">
-        <h2><span>Teaching</span></h2>
-        <p>I have been a teaching assistant for<p>
-        <ul>
-            <li><p><a href="https://math.iisc.ac.in/all-courses/ma366a.html" style="color: #6ca5d4;">MA 366a</a>, Introduction to Stochastic Finance, at IISc, Spring 2026 semester.</p></li>
-            <li><p><a href="https://math.iisc.ac.in/all-courses/ma361.html" style="color: #6ca5d4;">MA 361</a>, Probability Theory, at IISc, Fall 2023 and Fall 2025 semester.</p></li>
-            <li><p>Advance Analysis and Algebra, Jan 2024- May 2024, at Ramakrishna Mission Vidyamadira, Belur.</p></li>
-            <li><p><a href="https://math.iisc.ac.in/all-courses/uma201.html" style="color: #6ca5d4;">UM 201</a>, Probability and Statistics, at IISc, Fall 2024 semester.</p></li>
-            <li><p>Advance Analysis and Algebra, Aug 2024- May 2025, at Ramakrishna Mission Vidyamadira, Belur. [<a href="notes_RKMV_2024.html" style="color: #6ca5d4;">Notes</a>]</p></li>
-            <li><p><a href="https://math.iisc.ac.in/all-courses/ma262.html" style="color: #6ca5d4;">MA 262</a>, Introduction to Stochastic Processes, at IISc, Spring 2025 semester. [<a href="https://sanchayansen.wixsite.com/root/ma-262-2025-january" style="color: #6ca5d4;">Course Website</a>]</p></li>
-            <li><p>Advance Analysis and Algebra, Sep 2025- present, at Ramakrishna Mission Vidyamadira, Belur. [<a href="notes_RKMV_2024.html" style="color: #6ca5d4;">Notes</a>]</p></li>
-        </ul>
-    </section>
-    
-    
-    <section id="contact">
-        <h2><span>Contact</span></h2>
-        <p>Email: karambirdas@iisc.ac.in <br>
-           Alternate email: karambir.kd7@gmail.com
-        </p>
-        <p><Address>Mailing Address:<br> Department of Mathematics<br>
-            Indian Institute of Science<br>
-            Bangalore-560012<br>
-            Karnataka, India.</Address>
-        </p>
-    </section>
 
 
     <footer>
-        <p>&#8226; <a href="mailto:karambirdas@iisc.ac.in" style="color: #6ca5d4;">Email me</a>  &#8226;  <a href="https://linkedin.com/in/karambir-das-585730212" style="color: #6ca5d4;">LinkedIn</a>  &#8226;  <a href="https://github.com/karambirdas" style="color: #6ca5d4;">Github</a>   </p>
+        <p>&copy; 2026 Karambir Das | Last updated: <span id="last-updated"></span> </p>
     </footer>
+    <script>
+        const date = new Date(document.lastModified);
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('last-updated').textContent = date.toLocaleDateString('en-US', options);
+    </script>
 </body>
 </html>
